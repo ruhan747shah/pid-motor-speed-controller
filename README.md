@@ -19,32 +19,50 @@ A DC motor speed controller using an Arduino Uno, TB6612FNG motor driver, and a 
 
 ![Breadboard Prototype](images/breadboard.jpg)
 
-*Initial breadboard setup used to test the Arduino, motor driver, motor, and encoder.*
+*Breadboard setup used to test the Arduino, motor driver, motor, and encoder.*
 
-### 2. Serial Monitoring
+## Wiring
 
-![Serial Monitor](images/serial-monitor.png)
+### Power
 
-*Motor speed, target speed, and PWM output displayed while tuning the PID controller.*
+| From | To |
+|---|---|
+| Arduino 5V | Breadboard (+) rail |
+| Arduino GND | Breadboard (-) rail |
 
-### 3. The Schematic
+### Battery
 
-![Schematic](images/schematic.png)
+| From | To |
+|---|---|
+| Battery + | Driver VM |
+| Battery - | Driver GND / common ground |
 
-*KiCad schematic based on the tested breadboard circuit.*
+### TB6612FNG Motor Driver
 
-### 4. The PCB
+| Driver Pin | Arduino Connection |
+|---|---|
+| VCC | 5V breadboard rail |
+| GND | GND breadboard rail |
+| STBY | Pin 9 |
+| AIN1 | Pin 8 |
+| AIN2 | Pin 7 |
+| PWMA | Pin 6 |
 
-![PCB Layout](images/pcb-layout.png)
+### Motor
 
-*Custom PCB layout designed in KiCad for the motor control circuit.*
+| Motor Wire | Driver Pin |
+|---|---|
+| M1 (white) | AO1 |
+| M2 (red) | AO2 |
 
-### 5. PCB 3D View
+### Encoder
 
-![PCB 3D View](images/pcb-3d.png)
-
-*3D view of the PCB design.*
-
+| Encoder Wire | Arduino Connection |
+|---|---|
+| VCC (black) | 5V breadboard rail |
+| GND (purple) | GND breadboard rail |
+| C1 (green) | Pin 2 |
+| C2 (orange) | Pin 12 |
 
 ## PID Control
 
@@ -56,3 +74,40 @@ The PID values used during testing were:
 float kp = 0.5;
 float ki = 0.05;
 float kd = 0.01;
+```
+
+### 2. Serial Monitoring
+
+Motor speed, target speed, and PWM output were monitored through the Arduino Serial Monitor while testing and tuning the PID controller.
+
+Example output:
+
+```text
+Speed: 1980 | Target: 2100 | PWM: 146
+Speed: 2050 | Target: 2100 | PWM: 137
+Speed: 2080 | Target: 2100 | PWM: 131
+Speed: 2110 | Target: 2100 | PWM: 126
+Speed: 2090 | Target: 2100 | PWM: 129
+```
+
+*Example format of the Serial Monitor output during PID testing.*
+
+## Circuit Design
+
+### 3. The Schematic
+
+![Schematic](images/Screenshot%202026-09-05%20204639.png)
+
+*KiCad schematic based on the tested breadboard circuit.*
+
+### 4. The PCB
+
+![PCB Layout](images/Screenshot%202026-09-05%20205500.png)
+
+*Custom PCB layout designed in KiCad for the motor control circuit.*
+
+### 5. PCB 3D View
+
+![PCB 3D View](images/Screenshot%202026-09-05%20210238.png)
+
+*3D view of the PCB design.*
