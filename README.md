@@ -58,7 +58,7 @@ A DC motor speed controller using an Arduino Uno, TB6612FNG motor driver, and a 
 | C1 (green) | Pin 2 |
 | C2 (orange) | Pin 12 |
 
-## PID Control
+## 1. PID Control
 
 The Arduino reads the motor encoder and compares the measured speed with a target speed. The PID controller then adjusts the PWM output sent to the TB6612FNG motor driver.
 
