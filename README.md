@@ -13,8 +13,6 @@ A DC motor speed controller using an Arduino Uno, TB6612FNG motor driver, and a 
 - [Jumper Wires](https://www.amazon.ca/2-54mm-Dupont-Jumper-Cables-Female/dp/B09SXM64Z8/)
 - 5x AA Batteries
 
-## Project Gallery
-
 ## Wiring
 
 ### Power
@@ -74,7 +72,7 @@ float kd = 0.01;
 
 Motor speed, target speed, and PWM output were monitored through the Arduino Serial Monitor while testing and tuning the PID controller.
 
-Example output:
+Sample output from testing:
 
 ```text
 Speed: 1980 | Target: 2100 | PWM: 146
@@ -84,7 +82,7 @@ Speed: 2110 | Target: 2100 | PWM: 126
 Speed: 2090 | Target: 2100 | PWM: 129
 ```
 
-*Example format of the Serial Monitor output during PID testing.*
+*Sample Serial Monitor data recorded during PID testing.*
 
 ## Circuit Design
 
@@ -98,7 +96,7 @@ Speed: 2090 | Target: 2100 | PWM: 129
 
 ![PCB Layout](images/Screenshot%202026-09-05%20205500.png)
 
-*Custom PCB layout designed in KiCad for the motor control circuit.*
+*Custom 4-layer PCB designed and routed in KiCad based on the tested breadboard circuit.*
 
 ### 5. PCB 3D View
 
