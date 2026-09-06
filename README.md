@@ -15,12 +15,6 @@ A DC motor speed controller using an Arduino Uno, TB6612FNG motor driver, and a 
 
 ## Project Gallery
 
-### 1. Breadboard Prototype
-
-![Breadboard Prototype](images/breadboard.jpg)
-
-*Breadboard setup used to test the Arduino, motor driver, motor, and encoder.*
-
 ## Wiring
 
 ### Power
@@ -111,3 +105,15 @@ Speed: 2090 | Target: 2100 | PWM: 129
 ![PCB 3D View](images/Screenshot%202026-09-05%20210238.png)
 
 *3D view of the PCB design.*
+--
+## Skills Learned
+
+- PID control and tuning
+- Encoder feedback and motor speed measurement
+- PWM motor control
+- Arduino programming in C++
+- TB6612FNG motor driver interfacing
+- Breadboard prototyping and circuit testing
+- Schematic design in KiCad
+- 4-layer PCB design and routing
+- Hardware debugging and testing
