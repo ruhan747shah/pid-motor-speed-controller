@@ -4,13 +4,14 @@ A DC motor speed controller using an Arduino Uno, TB6612FNG motor driver, and a 
 
 ## Materials
 
-- 1x Arduino Uno R3
+- 1x [ELEGOO Uno R3](https://www.amazon.ca/Elegoo-Board-ATmega328P-ATMEGA16U2-Arduino/dp/B01EWOE0UU/)
 - 1x [MECCANIXITY 6 V DC Gear Motor with Encoder](https://www.amazon.ca/MECCANIXITY-Encoder-Gearbox-Electric-Reduction/dp/B0F8NH1M4Z/)
 - 1x [TB6612FNG Motor Driver Module](https://www.amazon.ca/Hyuduo-Motors-Driver-Controller-TB6612FNG/dp/B09PGJ8J8K/)
 - 1x [2.1 mm DC Jack Screw Terminal](https://www.amazon.ca/2-1mm-Screw-Terminal-Power-Connector/dp/B07MQTCZBG/)
 - 1x [Solderless Breadboard](https://www.amazon.ca/Breadboard-Solderless-Prototype-Distribution-Connecting/dp/B01EV6LJ7G/)
-- 1x 7.5 V Battery Pack
-- Jumper wires
+- 1x [5x AA Battery Holder](https://www.amazon.ca/LampVPath-Battery-Holder-Leads-Wires/dp/B07WRQ44YK/)
+- [Jumper Wires](https://www.amazon.ca/2-54mm-Dupont-Jumper-Cables-Female/dp/B09SXM64Z8/)
+- 5x AA Batteries
 
 ## Project Gallery
 
@@ -42,19 +43,14 @@ A DC motor speed controller using an Arduino Uno, TB6612FNG motor driver, and a 
 
 ![PCB 3D View](images/pcb-3d.png)
 
-*3D view of the completed PCB design.*
+*3D view of the PCB design.*
 
-### 6. Final Setup
-
-![Final Setup](images/final-setup.jpg)
-
-*Final motor controller setup with the Arduino, TB6612FNG driver, encoder motor, and power supply.*
 
 ## PID Control
 
 The Arduino reads the motor encoder and compares the measured speed with a target speed. The PID controller then adjusts the PWM output sent to the TB6612FNG motor driver.
 
-The current controller uses:
+The PID values used during testing were:
 
 ```cpp
 float kp = 0.5;
