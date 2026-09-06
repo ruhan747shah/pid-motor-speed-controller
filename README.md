@@ -105,7 +105,7 @@ Speed: 2090 | Target: 2100 | PWM: 129
 ![PCB 3D View](images/Screenshot%202026-09-05%20210238.png)
 
 *3D view of the PCB design.*
---
+
 ## Skills Learned
 
 - PID control and tuning
